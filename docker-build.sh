@@ -20,7 +20,7 @@ COMMIT_HASH=$(git rev-parse HEAD | cut -c 1-7)
 IMAGE_TAG=${COMMIT_HASH:=latest}
 
 echo Logging in to Amazon ECR...
-$(aws ecr get-login --no-include-email --region us-east-1)
+sudo $(aws ecr get-login --no-include-email --region us-east-1)
 
 echo Building the Docker image, started at `date`...          
 sudo docker build -t $REPOSITORY_URI:$IMAGE_TAG .
