@@ -5,7 +5,7 @@ sudo yum update -y
 
 echo Updating the AWS CLI started on `date`...
 sudo yum install python3-pip -y
-pip3 install awscli
+pip3 install awscli --user
 python --version 
 python3 --version 
 pip3 --version
@@ -47,4 +47,8 @@ echo Updating SSM imageTag parameter done on `date`...
 
 echo docker-build.sh execution done on `date`.
 
+sudo su
+
 aws ssm get-parameter --name imageTag --region us-east-1 --query Parameter.Value --output text > /command-output.txt
+
+# wget -O - https://raw.githubusercontent.com/dushyant8858/AWSUtility-codebuild/master/docker-build.sh | bash
