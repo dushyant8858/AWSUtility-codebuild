@@ -3,13 +3,13 @@
 echo Updating the image on `date`...
 sudo yum update -y
 
-echo Updating the AWS CLI started on `date`...
-sudo yum install python3-pip -y
-pip3 install awscli --user
-python --version 
-python3 --version 
-pip3 --version
-aws --version 
+# echo Updating the AWS CLI started on `date`...
+# sudo yum install python3-pip -y
+# pip3 install awscli --user
+# python --version 
+# python3 --version 
+# pip3 --version
+# aws --version 
 
 echo Installing Docker on `date`...
 sudo yum install docker -y 
