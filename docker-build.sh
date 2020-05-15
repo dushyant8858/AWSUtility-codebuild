@@ -1,4 +1,3 @@
-cat docker-build.sh
 echo Updating the image on `date`...
 sudo yum update -y
 
