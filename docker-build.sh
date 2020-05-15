@@ -37,7 +37,7 @@ echo Building the Docker image, started at `date`...
 # docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
 sudo docker build -t $REPOSITORY_URI:$IMAGE_TAG .
 
-echo Pushing the Docker image to ECR, started at `date`...
+echo Pushing the Docker image to Docker Hub, started at `date`...
 # docker push $REPOSITORY_URI:latest
 sudo docker push $REPOSITORY_URI:$IMAGE_TAG
 echo Docker image build and push done completed on `date`
@@ -52,4 +52,4 @@ echo docker-build.sh execution done on `date`.
 #aws ssm get-parameter --name imageTag --region us-east-1 --query Parameter.Value --output text > /command-output.txt
 
 # wget -O - https://raw.githubusercontent.com/dushyant8858/AWSUtility-codebuild/master/docker-build.sh | bash
-echo END
+echo -END-
