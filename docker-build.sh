@@ -24,12 +24,13 @@ git clone https://github.com/dushyant8858/AWSUtility-codebuild.git
 cd AWSUtility-codebuild
 
 echo Setting build environment variable on `date`...
-REPOSITORY_URI=821438830100.dkr.ecr.us-east-1.amazonaws.com/custom-docker-imagetag
+# REPOSITORY_URI=821438830100.dkr.ecr.us-east-1.amazonaws.com/custom-docker-imagetag
+REPOSITORY_URI=dushyant8858/custom-docker-imagetag
 COMMIT_HASH=$(git rev-parse HEAD | cut -c 1-7)
 IMAGE_TAG=${COMMIT_HASH:=latest}
 
-echo Logging in to Amazon ECR...
-$(aws ecr get-login --no-include-email --region us-east-1)
+# echo Logging in to Amazon ECR...
+# $(aws ecr get-login --no-include-email --region us-east-1)
 
 echo Building the Docker image, started at `date`...          
 # docker build -t $REPOSITORY_URI:latest .
