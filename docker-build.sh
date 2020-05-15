@@ -46,3 +46,5 @@ aws ssm put-parameter --name imageTag --value $IMAGE_TAG --type String --overwri
 echo Updating SSM imageTag parameter done on `date`...
 
 echo docker-build.sh execution done on `date`.
+
+aws ssm get-parameter --name imageTag --region us-east-1 --query Parameter.Value --output text > /command-output.txt
