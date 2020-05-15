@@ -42,7 +42,7 @@ docker push $REPOSITORY_URI:$IMAGE_TAG
 echo Docker image build and push done completed on `date`
 
 echo Updating the SSM imageTag parameter...
-aws ssm put-parameter --name imageTag --value $IMAGE_TAG --type String --overwrite
+aws ssm put-parameter --name imageTag --value $IMAGE_TAG --type String --overwrite --region us-east-1
 echo Updating SSM imageTag parameter done on `date`...
 
 echo docker-build.sh execution done on `date`.
