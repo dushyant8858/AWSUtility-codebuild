@@ -36,4 +36,4 @@ echo docker-build.sh execution done on `date`.
 
 #aws ssm get-parameter --name imageTag --region us-east-1 --query Parameter.Value --output text > /command-output.txt
 # wget -O - https://raw.githubusercontent.com/dushyant8858/AWSUtility-codebuild/master/docker-build.sh | bash
-echo -END-
+echo --END--
